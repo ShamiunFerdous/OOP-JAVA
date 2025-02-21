@@ -1,0 +1,40 @@
+An exception is an event that occurs during the execution of a program and disrupts
+the normal flow of instructions. For example, if a program tries to divide a number by zero,
+an exception will occur.
+
+public class ExceptionExample {
+    public static void main(String[] args) {
+        int a = 10, b = 0;
+        int result = a / b;  // This line will throw ArithmeticException
+        System.out.println(result);
+    }
+}
+
+ Types of Exceptions:
+ ---------------------
+(A) Checked Exceptions (Compile-time Exceptions)
+----------------------------------------------------
+These exceptions are checked at compile-time.
+The compiler forces the programmer to handle them using try-catch or throws.
+Examples:
+IOException
+SQLException
+FileNotFoundException
+
+
+(B) Unchecked Exceptions(Runtime Exceptions)
+------------------------------------------------
+Unchecked exceptions are not checked by the compiler at compile-time.
+They usually occur due to logical errors in the code (e.g., division by zero, null references).
+These exceptions occur at runtime, and handling them is optional.
+
+Examples:
+NullPointerException
+ArithmeticException
+ArrayIndexOutOfBoundsException
+IllegalArgumentException
+NumberFormatException
+
+Handling Unchecked Exceptions
+Since unchecked exceptions occur due to programming logic errors, handling them is
+optional. However, you can use try-catch to prevent unexpected crashes.

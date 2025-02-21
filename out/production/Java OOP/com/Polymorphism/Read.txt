@@ -1,0 +1,93 @@
+Polymorphism -> Poly means many and morphism means ways to represents
+
+Types of Polymorphism:
+ -> Compile Time/Static Polymorphism -> achieved by method overloading means same name but
+ types,arguments,return types can be different(Example: Multiple constructor)
+
+ -> Runtime/Dynamic Polymorphism -> acheived by method overriding
+
+
+ ## Method Overloading (Compile-time Polymorphism):
+ -------------------------------------------------------
+ Method overloading allows a class to have multiple methods with the same name
+ but different parameters (different type, number, or order of parameters).
+ The compiler determines which method to call at compile-time, making it static polymorphism.
+
+ Rules for Method Overloading
+ 1.Methods must have the same name but different parameter lists.
+ 2.The return type does not matter in distinguishing overloaded methods.
+ 3.It must occur in the same class (not in a subclass).
+
+example:
+ class MathUtils {
+     // Method with two integer parameters
+     int add(int a, int b) {
+         return a + b;
+     }
+
+     // Method with three integer parameters
+     int add(int a, int b, int c) {
+         return a + b + c;
+     }
+
+     // Method with two double parameters
+     double add(double a, double b) {
+         return a + b;
+     }
+ }
+
+ public class Main {
+     public static void main(String[] args) {
+         MathUtils obj = new MathUtils();
+         System.out.println(obj.add(5, 10));       // Calls add(int, int)
+         System.out.println(obj.add(5, 10, 15));  // Calls add(int, int, int)
+         System.out.println(obj.add(5.5, 2.5));   // Calls add(double, double)
+     }
+ }
+
+
+## Method Overriding (Runtime Polymorphism):
+------------------------------------------------
+Method overriding allows a subclass to provide a specific implementation of a method
+that is already defined in its superclass. It is used for dynamic method dispatch
+(determining the method at runtime), making it runtime polymorphism.
+
+Rules for Method Overriding
+1. The method in the subclass must have the same name and parameter list as in the superclass.
+2. The return type should be the same (or a subclass of the return type in Java 5+).
+3. The access modifier cannot be more restrictive (e.g., a public method cannot be overridden as private).
+4. The overridden method in the superclass must not be static or final.
+5. The subclass method must use @Override annotation (optional but recommended).
+
+example:
+class Animal {
+    void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal;  // Reference of superclass
+
+        myAnimal = new Dog(); // Upcasting to Dog
+        myAnimal.makeSound(); // Calls Dog's makeSound()
+
+        myAnimal = new Cat(); // Upcasting to Cat
+        myAnimal.makeSound(); // Calls Cat's makeSound()
+    }
+}

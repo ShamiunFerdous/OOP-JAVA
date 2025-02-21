@@ -1,0 +1,41 @@
+A thread is the smallest unit of execution within a process. Threads allows a program to operate more
+efficiently by doing multiple things at the same time.
+Threads can be used to perform complicated tasks in the background without interrupting the
+main program.
+
+Single-Thread vs Multi-Thread
+Single-threaded: The program executes one task at a time.
+Multi-threaded: Multiple tasks run concurrently, improving efficiency.
+
+
+Thread Lifecycle in Java
+A thread goes through different states:
+
+New – Created but not started.
+Runnable – Ready to run but waiting for CPU time.
+Running – Actively executing.
+Blocked/Waiting – Waiting for another thread to release a resource.
+Terminated – Execution is finished.
+
+Multithreading is a programming technique where multiple threads run concurrently within a single process.
+It enables parallel execution, improving performance and efficiency by utilizing the CPU more effectively.
+
+
+Thread Scheduling: The CPU decides which thread runs using a scheduler.
+Threads take turns running on the CPU.
+
+Context Switching: The CPU saves the current thread’s state and loads another thread’s state when
+witching between them.
+
+Single-Core vs Multi-Core:
+Single-core CPU: Runs one thread at a time but switches fast to create an illusion of parallel execution.
+Multi-core CPU: Runs multiple threads truly in parallel, one per core.
+
+
+Thread States:
+Runnable → Ready to run but waiting for CPU time.
+Running → Currently executing on the CPU.
+Waiting/Blocked → Paused, waiting for a resource.
+Terminated → Finished execution.
+Thread Priority & Interrupts: Higher-priority threads get more CPU time, but the OS can
+pause or stop any thread when needed.
