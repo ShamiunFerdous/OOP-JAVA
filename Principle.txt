@@ -1,0 +1,35 @@
+Encapsulation – Bundling data (fields) and methods (functions) that operate on the data into a single unit, usually a class. It restricts direct
+access to some of the object's components, protecting data from unintended modifications.
+
+class Person {
+    private String name;  // Private variable, not accessible directly
+
+    public Person(String name) {  // Constructor
+        this.name = name;
+    }
+
+    public String getName() {  // Getter method
+        return name;
+    }
+
+    public void setName(String name) {  // Setter method
+        this.name = name;
+    }
+}
+
+Here, the name variable is private, so it can't be accessed directly.
+Instead, getName() and setName() control access.
+
+
+Abstraction – Hiding complex implementation details and exposing only the essential features of an object. This simplifies code usage and improves maintainability.
+Abstraction allows you to focus on what an object does rather than how it does it
+Example: An interface or an abstract class in Java that defines methods without implementing them.
+
+
+Polymorphism – Enabling a single interface to represent different underlying data types, allowing methods to take different forms.
+Example: Method Overloading (same method name but different parameters) and Method Overriding (subclass provides a specific implementation of a parent class method).
+
+
+
+Inheritance – Allowing one class (child/subclass) to inherit properties and behaviors from another class (parent/superclass). This promotes code reuse and hierarchy structure.
+Example: class Car extends Vehicle in Java, where Car inherits attributes and methods from Vehicle.
