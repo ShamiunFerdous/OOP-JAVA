@@ -2,6 +2,9 @@ package com.Static.Singleton;
 
 /*
 in a singleton class we can create only one object. That's why , we use private here.
+A Singleton Class is a design pattern that ensures only one instance of a class is created and provides a global access 
+point to that instance.A Singleton Class is a design pattern that ensures only one instance of a class is created and 
+provides a global access point to that instance.
  */
 
 
@@ -40,3 +43,11 @@ public class Single {
         // it will show 1, because here all the objects are pointing to one object.
     }
 }
+
+/*
+Key Properties of Singleton
+✔ Only one instance of the class exists.
+✔ The instance is shared globally.
+✔ Private constructor prevents multiple object creation.
+✔ Static method provides controlled access.
+*/
