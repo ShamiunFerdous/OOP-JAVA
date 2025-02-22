@@ -3,8 +3,7 @@ package com.Static.Singleton;
 /*
 in a singleton class we can create only one object. That's why , we use private here.
 A Singleton Class is a design pattern that ensures only one instance of a class is created and provides a global access 
-point to that instance.A Singleton Class is a design pattern that ensures only one instance of a class is created and 
-provides a global access point to that instance.
+point to that instance.
  */
 
 
