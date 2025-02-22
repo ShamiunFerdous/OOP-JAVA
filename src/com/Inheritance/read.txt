@@ -1,0 +1,36 @@
+Inheritance is an Object-Oriented Programming (OOP) concept that allows a child class (subclass) to inherit
+properties and methods from a parent class (superclass). This promotes code reusability and hierarchy.
+
+Single Inheritance;
+------------------------
+A subclass inherits from a single parent class.
+
+Multilevel Inheritance
+------------------------
+A class is inherited by another class, which is then inherited by another class.
+
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking...");
+    }
+}
+
+// Child of Dog class
+class Puppy extends Dog {
+    void weep() {
+        System.out.println("Weeping...");
+    }
+}
+
+
+Multiple Inheritance:
+---------------------------
+Java does not support multiple inheritance (one class inheriting from multiple classes) to avoid
+the diamond problem. However, this can be achieved using interfaces.
+
