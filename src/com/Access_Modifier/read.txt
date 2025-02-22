@@ -1,0 +1,15 @@
+Access modifiers in Java control the visibility of classes, methods, and variables. They help in encapsulation, ensuring data security and proper access control.
+
+ │ Class │ Package │ Subclass │ Subclass │ World
+            │       │         │(same pkg)│(diff pkg)│(diff pkg & not subclass)
+────────────┼───────┼─────────┼──────────┼──────────┼──────────────────────────
+public      │   +   │    +    │    +     │     +    │   +
+────────────┼───────┼─────────┼──────────┼──────────┼──────────────────────────
+protected   │   +   │    +    │    +     │     +    │
+────────────┼───────┼─────────┼──────────┼──────────┼──────────────────────────
+no modifier │   +   │    +    │    +     │          │
+────────────┼───────┼─────────┼──────────┼──────────┼──────────────────────────
+private     │   +   │         │          │          │
+
++ : accessible
+blank : not accessible
