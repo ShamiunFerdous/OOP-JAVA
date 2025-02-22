@@ -8,6 +8,10 @@ required to have an object or instance to call it in a static method. Otherwise,
 
 public class Var {
     public static void main(String[] args) {
+/*
+static is a keyword used to define class-level members (variables, methods, blocks, and nested classes)
+that belong to the class rather than any specific instance of the class.
+*/
 
         // if we write greet(), it will give error.
 
